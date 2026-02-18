@@ -84,6 +84,11 @@ final class Nusrat_Elementor_Widgets {
         $widgets_manager->register( new \Nusrat_Hero_Section_Widget() );
         $widgets_manager->register( new \Nusrat_Trust_Bar_Widget() );
         $widgets_manager->register( new \Nusrat_Category_Showcase_Widget() );
+        $widgets_manager->register( new \Nusrat_Product_Display_Widget() );
+        $widgets_manager->register( new \Nusrat_Lifestyle_Banner_Widget() );
+        $widgets_manager->register( new \Nusrat_Why_Choose_Us_Widget() );
+        $widgets_manager->register( new \Nusrat_Testimonials_Widget() );
+        $widgets_manager->register( new \Nusrat_CTA_Banner_Widget() );
     }
 
     /**
