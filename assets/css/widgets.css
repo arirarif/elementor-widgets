@@ -379,6 +379,668 @@
 }
 
 
+/* =============================================
+   PRODUCT DISPLAY WIDGET
+   ============================================= */
+.elementor-widget-nusrat_product_display .nw-products {
+    padding: 80px 0;
+    width: 100%;
+}
+
+.elementor-widget-nusrat_product_display .nw-products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* -- Section Header -- */
+.elementor-widget-nusrat_product_display .nw-products-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.elementor-widget-nusrat_product_display .nw-products-header h2 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 34px !important;
+    font-weight: 700 !important;
+    color: var(--nw-dark-text) !important;
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+    line-height: 1.3 !important;
+    text-transform: none !important;
+}
+
+.elementor-widget-nusrat_product_display .nw-products-header p {
+    font-size: 16px !important;
+    color: #777 !important;
+    max-width: 500px;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    line-height: 1.6 !important;
+}
+
+.elementor-widget-nusrat_product_display .nw-accent-line {
+    width: 50px;
+    height: 3px;
+    background: var(--nw-accent);
+    margin: 16px auto 0;
+    border-radius: 2px;
+    display: block;
+}
+
+/* -- Product Grid -- */
+.elementor-widget-nusrat_product_display .nw-products-grid {
+    display: grid !important;
+    gap: 24px;
+}
+
+.elementor-widget-nusrat_product_display .nw-products-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.elementor-widget-nusrat_product_display .nw-products-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.elementor-widget-nusrat_product_display .nw-products-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* -- Product Card -- */
+.elementor-widget-nusrat_product_display .nw-product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--nw-light-gray);
+    transition: all 0.3s ease;
+}
+
+.elementor-widget-nusrat_product_display .nw-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    border-color: transparent;
+}
+
+/* -- Product Image -- */
+.elementor-widget-nusrat_product_display .nw-product-image {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    background: var(--nw-light-bg);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none !important;
+}
+
+.elementor-widget-nusrat_product_display .nw-product-image img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+.elementor-widget-nusrat_product_display .nw-product-card:hover .nw-product-image img {
+    transform: scale(1.05);
+}
+
+/* -- Badge -- */
+.elementor-widget-nusrat_product_display .nw-product-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #fff !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    padding: 4px 10px !important;
+    border-radius: 4px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    z-index: 2;
+}
+
+.elementor-widget-nusrat_product_display .nw-badge-new {
+    background-color: var(--nw-secondary);
+}
+
+.elementor-widget-nusrat_product_display .nw-badge-sale {
+    background-color: var(--nw-accent);
+}
+
+/* -- Product Info -- */
+.elementor-widget-nusrat_product_display .nw-product-info {
+    padding: 16px;
+}
+
+.elementor-widget-nusrat_product_display .nw-product-cat {
+    display: block;
+    font-size: 12px !important;
+    color: var(--nw-secondary) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.elementor-widget-nusrat_product_display .nw-product-info h3 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+    color: var(--nw-dark-text) !important;
+    line-height: 1.4 !important;
+    text-transform: none !important;
+}
+
+.elementor-widget-nusrat_product_display .nw-product-info h3 a {
+    color: var(--nw-dark-text) !important;
+    text-decoration: none !important;
+    transition: color 0.2s;
+}
+
+.elementor-widget-nusrat_product_display .nw-product-info h3 a:hover {
+    color: var(--nw-primary) !important;
+}
+
+/* -- Price -- */
+.elementor-widget-nusrat_product_display .nw-product-price {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.elementor-widget-nusrat_product_display .nw-current-price {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: var(--nw-primary) !important;
+    line-height: 1.2;
+}
+
+.elementor-widget-nusrat_product_display .nw-current-price .woocommerce-Price-amount {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: var(--nw-primary) !important;
+}
+
+.elementor-widget-nusrat_product_display .nw-old-price {
+    font-size: 14px !important;
+    color: #999 !important;
+    text-decoration: line-through !important;
+}
+
+.elementor-widget-nusrat_product_display .nw-old-price .woocommerce-Price-amount {
+    font-size: 14px !important;
+    color: #999 !important;
+}
+
+/* -- Add to Cart Button -- */
+.elementor-widget-nusrat_product_display .nw-btn-cart {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100%;
+    padding: 11px 16px !important;
+    background-color: var(--nw-accent) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    line-height: 1.4 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.elementor-widget-nusrat_product_display .nw-btn-cart:hover {
+    background-color: var(--nw-accent-hover) !important;
+    color: #fff !important;
+}
+
+.elementor-widget-nusrat_product_display .nw-btn-cart i {
+    font-size: 14px !important;
+    color: #fff !important;
+    line-height: 1 !important;
+}
+
+/* -- No Products -- */
+.elementor-widget-nusrat_product_display .nw-no-products {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-size: 15px;
+}
+
+
+/* =============================================
+   LIFESTYLE BANNER WIDGET
+   ============================================= */
+.elementor-widget-nusrat_lifestyle_banner .nw-lifestyle {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    min-height: 420px;
+    width: 100%;
+}
+
+.elementor-widget-nusrat_lifestyle_banner .nw-lifestyle.nw-lifestyle-flipped {
+    direction: rtl;
+}
+
+.elementor-widget-nusrat_lifestyle_banner .nw-lifestyle.nw-lifestyle-flipped > * {
+    direction: ltr;
+}
+
+.elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+}
+
+.elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-content {
+    background-color: #F5F1EB;
+    display: flex !important;
+    align-items: center;
+    padding: 60px;
+}
+
+.elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-text h2 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: var(--nw-dark-text) !important;
+    margin: 0 0 16px 0 !important;
+    padding: 0 !important;
+    line-height: 1.25 !important;
+    text-transform: none !important;
+}
+
+.elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-text p {
+    font-size: 16px !important;
+    color: #666 !important;
+    margin: 0 0 28px 0 !important;
+    padding: 0 !important;
+    line-height: 1.7 !important;
+}
+
+.elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 14px 32px !important;
+    border-radius: 8px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+    background-color: var(--nw-secondary) !important;
+    border: 2px solid var(--nw-secondary) !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+    text-transform: none !important;
+    box-shadow: none !important;
+}
+
+.elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-btn:hover {
+    background-color: #4A9A2E !important;
+    border-color: #4A9A2E !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(91, 174, 59, 0.3) !important;
+    color: #fff !important;
+}
+
+.elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-btn .nw-btn-icon i,
+.elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-btn .nw-btn-icon svg {
+    font-size: 15px !important;
+    width: 15px;
+    height: 15px;
+    color: #fff !important;
+    fill: #fff !important;
+}
+
+
+/* =============================================
+   WHY CHOOSE US WIDGET
+   ============================================= */
+.elementor-widget-nusrat_why_choose_us .nw-why-us {
+    padding: 80px 0;
+    width: 100%;
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-why-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-why-header h2 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 34px !important;
+    font-weight: 700 !important;
+    color: var(--nw-dark-text) !important;
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+    line-height: 1.3 !important;
+    text-transform: none !important;
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-why-header p {
+    font-size: 16px !important;
+    color: #777 !important;
+    max-width: 500px;
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-accent-line {
+    width: 50px;
+    height: 3px;
+    background: var(--nw-accent);
+    margin: 16px auto 0;
+    border-radius: 2px;
+    display: block;
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-why-grid {
+    display: grid !important;
+    gap: 30px;
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-why-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.elementor-widget-nusrat_why_choose_us .nw-why-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.elementor-widget-nusrat_why_choose_us .nw-why-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+.elementor-widget-nusrat_why_choose_us .nw-why-item {
+    text-align: center;
+    padding: 32px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-why-item:hover {
+    background: var(--nw-light-bg);
+    border-color: var(--nw-light-gray);
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-why-icon {
+    width: 68px;
+    height: 68px;
+    background: linear-gradient(135deg, var(--nw-primary), #2A5298);
+    border-radius: 16px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-why-icon i {
+    font-size: 26px;
+    color: #fff !important;
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-why-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: #fff !important;
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-why-item h3 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    margin: 0 0 8px 0 !important;
+    padding: 0 !important;
+    color: var(--nw-dark-text) !important;
+    text-transform: none !important;
+}
+
+.elementor-widget-nusrat_why_choose_us .nw-why-item p {
+    font-size: 14px !important;
+    color: #777 !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* =============================================
+   TESTIMONIALS WIDGET
+   ============================================= */
+.elementor-widget-nusrat_testimonials .nw-testimonials {
+    padding: 80px 0;
+    width: 100%;
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonials-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonials-header h2 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 34px !important;
+    font-weight: 700 !important;
+    color: var(--nw-dark-text) !important;
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+    text-transform: none !important;
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonials-header p {
+    font-size: 16px !important;
+    color: #777 !important;
+    margin: 0 auto !important;
+    max-width: 500px;
+}
+
+.elementor-widget-nusrat_testimonials .nw-accent-line {
+    width: 50px;
+    height: 3px;
+    background: var(--nw-accent);
+    margin: 16px auto 0;
+    border-radius: 2px;
+    display: block;
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonial-grid {
+    display: grid !important;
+    gap: 24px;
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonial-cols-1 { grid-template-columns: 1fr; }
+.elementor-widget-nusrat_testimonials .nw-testimonial-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.elementor-widget-nusrat_testimonials .nw-testimonial-cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+.elementor-widget-nusrat_testimonials .nw-testimonial-card {
+    background: var(--nw-light-bg);
+    border-radius: 12px;
+    padding: 32px;
+    border: 1px solid var(--nw-light-gray);
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonial-stars {
+    display: flex !important;
+    gap: 3px;
+    margin-bottom: 16px;
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonial-stars i {
+    font-size: 14px !important;
+    color: var(--nw-accent);
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonial-card blockquote {
+    font-size: 15px !important;
+    color: #555 !important;
+    line-height: 1.7 !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    font-style: italic;
+    border: none !important;
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonial-author {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonial-initial {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 50%;
+    background: var(--nw-primary);
+    color: #fff !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonial-avatar-img {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonial-author h4 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--nw-dark-text) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.elementor-widget-nusrat_testimonials .nw-testimonial-author span {
+    font-size: 12px !important;
+    color: #999 !important;
+}
+
+
+/* =============================================
+   CTA BANNER WIDGET
+   ============================================= */
+.elementor-widget-nusrat_cta_banner .nw-cta {
+    padding: 64px 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+
+.elementor-widget-nusrat_cta_banner .nw-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.elementor-widget-nusrat_cta_banner .nw-cta h2 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 34px !important;
+    font-weight: 700 !important;
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+    color: #fff !important;
+    text-transform: none !important;
+}
+
+.elementor-widget-nusrat_cta_banner .nw-cta-desc {
+    font-size: 17px !important;
+    opacity: 0.85;
+    margin: 0 0 10px 0 !important;
+    color: #fff !important;
+}
+
+.elementor-widget-nusrat_cta_banner .nw-cta-contacts {
+    display: flex !important;
+    justify-content: center;
+    gap: 40px;
+    margin: 24px 0 32px;
+    flex-wrap: wrap;
+}
+
+.elementor-widget-nusrat_cta_banner .nw-cta-contacts a {
+    color: #fff !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px !important;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: color 0.2s;
+}
+
+.elementor-widget-nusrat_cta_banner .nw-cta-contacts a:hover {
+    color: #FFD89E !important;
+}
+
+.elementor-widget-nusrat_cta_banner .nw-cta-contacts a i {
+    color: #fff !important;
+    font-size: 16px;
+}
+
+.elementor-widget-nusrat_cta_banner .nw-cta-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 15px 34px !important;
+    border-radius: 8px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+    background-color: var(--nw-accent) !important;
+    border: 2px solid var(--nw-accent) !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+    text-transform: none !important;
+    box-shadow: none !important;
+}
+
+.elementor-widget-nusrat_cta_banner .nw-cta-btn:hover {
+    background-color: var(--nw-accent-hover) !important;
+    border-color: var(--nw-accent-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(232, 121, 43, 0.4) !important;
+    color: #fff !important;
+}
+
+.elementor-widget-nusrat_cta_banner .nw-cta-btn .nw-btn-icon i,
+.elementor-widget-nusrat_cta_banner .nw-cta-btn .nw-btn-icon svg {
+    font-size: 15px !important;
+    color: #fff !important;
+    fill: #fff !important;
+}
+
+
 /* =============================================================================
    RESPONSIVE - TABLET (max-width: 1024px)
    ============================================================================= */
@@ -425,6 +1087,67 @@
 
     .elementor-widget-nusrat_category_showcase .nw-cat-section-header h2 {
         font-size: 28px !important;
+    }
+
+    /* -- Products -- */
+    .elementor-widget-nusrat_product_display .nw-products {
+        padding: 60px 0;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-products-cols-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .elementor-widget-nusrat_product_display .nw-products-header h2 {
+        font-size: 28px !important;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-product-image {
+        height: 190px;
+    }
+
+    /* -- Lifestyle -- */
+    .elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-content {
+        padding: 40px;
+    }
+
+    .elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-text h2 {
+        font-size: 26px !important;
+    }
+
+    /* -- Why Choose Us -- */
+    .elementor-widget-nusrat_why_choose_us .nw-why-us {
+        padding: 60px 0;
+    }
+
+    .elementor-widget-nusrat_why_choose_us .nw-why-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .elementor-widget-nusrat_why_choose_us .nw-why-header h2 {
+        font-size: 28px !important;
+    }
+
+    /* -- Testimonials -- */
+    .elementor-widget-nusrat_testimonials .nw-testimonials {
+        padding: 60px 0;
+    }
+
+    .elementor-widget-nusrat_testimonials .nw-testimonial-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .elementor-widget-nusrat_testimonials .nw-testimonials-header h2 {
+        font-size: 28px !important;
+    }
+
+    /* -- CTA -- */
+    .elementor-widget-nusrat_cta_banner .nw-cta h2 {
+        font-size: 28px !important;
+    }
+
+    .elementor-widget-nusrat_cta_banner .nw-cta-desc {
+        font-size: 15px !important;
     }
 }
 
@@ -544,6 +1267,173 @@
     .elementor-widget-nusrat_category_showcase .nw-cat-overlay h3 {
         font-size: 18px !important;
     }
+
+    /* -- Products -- */
+    .elementor-widget-nusrat_product_display .nw-products {
+        padding: 48px 0;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-products-header {
+        margin-bottom: 32px;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-products-header h2 {
+        font-size: 24px !important;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-products-header p {
+        font-size: 14px !important;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-products-cols-2,
+    .elementor-widget-nusrat_product_display .nw-products-cols-3,
+    .elementor-widget-nusrat_product_display .nw-products-cols-4 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-product-image {
+        height: 170px;
+        padding: 14px;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-product-info {
+        padding: 12px;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-product-info h3 {
+        font-size: 13px !important;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-current-price,
+    .elementor-widget-nusrat_product_display .nw-current-price .woocommerce-Price-amount {
+        font-size: 17px !important;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-btn-cart {
+        padding: 10px 12px !important;
+        font-size: 12px !important;
+    }
+
+    /* -- Lifestyle -- */
+    .elementor-widget-nusrat_lifestyle_banner .nw-lifestyle {
+        grid-template-columns: 1fr !important;
+    }
+
+    .elementor-widget-nusrat_lifestyle_banner .nw-lifestyle.nw-lifestyle-flipped {
+        direction: ltr;
+    }
+
+    .elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-image {
+        min-height: 250px;
+    }
+
+    .elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-content {
+        padding: 36px 20px;
+    }
+
+    .elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-text h2 {
+        font-size: 24px !important;
+    }
+
+    .elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-text p {
+        font-size: 14px !important;
+    }
+
+    .elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-btn {
+        padding: 12px 24px !important;
+        font-size: 14px !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* -- Why Choose Us -- */
+    .elementor-widget-nusrat_why_choose_us .nw-why-us {
+        padding: 48px 0;
+    }
+
+    .elementor-widget-nusrat_why_choose_us .nw-why-cols-2,
+    .elementor-widget-nusrat_why_choose_us .nw-why-cols-3,
+    .elementor-widget-nusrat_why_choose_us .nw-why-cols-4 {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    .elementor-widget-nusrat_why_choose_us .nw-why-header h2 {
+        font-size: 24px !important;
+    }
+
+    .elementor-widget-nusrat_why_choose_us .nw-why-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+    }
+
+    .elementor-widget-nusrat_why_choose_us .nw-why-icon i {
+        font-size: 22px;
+    }
+
+    .elementor-widget-nusrat_why_choose_us .nw-why-item {
+        padding: 20px 12px;
+    }
+
+    .elementor-widget-nusrat_why_choose_us .nw-why-item h3 {
+        font-size: 14px !important;
+    }
+
+    .elementor-widget-nusrat_why_choose_us .nw-why-item p {
+        font-size: 12px !important;
+    }
+
+    /* -- Testimonials -- */
+    .elementor-widget-nusrat_testimonials .nw-testimonials {
+        padding: 48px 0;
+    }
+
+    .elementor-widget-nusrat_testimonials .nw-testimonial-cols-2,
+    .elementor-widget-nusrat_testimonials .nw-testimonial-cols-3 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .elementor-widget-nusrat_testimonials .nw-testimonials-header h2 {
+        font-size: 24px !important;
+    }
+
+    .elementor-widget-nusrat_testimonials .nw-testimonial-card {
+        padding: 24px;
+    }
+
+    .elementor-widget-nusrat_testimonials .nw-testimonial-card blockquote {
+        font-size: 14px !important;
+    }
+
+    /* -- CTA -- */
+    .elementor-widget-nusrat_cta_banner .nw-cta {
+        padding: 48px 0;
+    }
+
+    .elementor-widget-nusrat_cta_banner .nw-cta h2 {
+        font-size: 24px !important;
+    }
+
+    .elementor-widget-nusrat_cta_banner .nw-cta-desc {
+        font-size: 14px !important;
+    }
+
+    .elementor-widget-nusrat_cta_banner .nw-cta-contacts {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .elementor-widget-nusrat_cta_banner .nw-cta-contacts a {
+        font-size: 14px !important;
+    }
+
+    .elementor-widget-nusrat_cta_banner .nw-cta-btn {
+        padding: 14px 28px !important;
+        font-size: 14px !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
 }
 
 
@@ -600,5 +1490,76 @@
 
     .elementor-widget-nusrat_category_showcase .nw-cat-overlay h3 {
         font-size: 16px !important;
+    }
+
+    /* -- Products -- */
+    .elementor-widget-nusrat_product_display .nw-products-cols-2,
+    .elementor-widget-nusrat_product_display .nw-products-cols-3,
+    .elementor-widget-nusrat_product_display .nw-products-cols-4 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-product-card {
+        display: grid !important;
+        grid-template-columns: 140px 1fr;
+        border-radius: 10px;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-product-image {
+        height: auto !important;
+        min-height: 140px;
+        border-radius: 10px 0 0 10px;
+        padding: 12px;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-product-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 14px;
+    }
+
+    .elementor-widget-nusrat_product_display .nw-product-badge {
+        top: 8px;
+        left: 8px;
+        font-size: 10px !important;
+        padding: 3px 7px !important;
+    }
+
+    /* -- Lifestyle -- */
+    .elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-image {
+        min-height: 200px;
+    }
+
+    .elementor-widget-nusrat_lifestyle_banner .nw-lifestyle-text h2 {
+        font-size: 20px !important;
+    }
+
+    /* -- Why Choose Us -- */
+    .elementor-widget-nusrat_why_choose_us .nw-why-cols-2,
+    .elementor-widget-nusrat_why_choose_us .nw-why-cols-3,
+    .elementor-widget-nusrat_why_choose_us .nw-why-cols-4 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .elementor-widget-nusrat_why_choose_us .nw-why-item {
+        display: flex !important;
+        flex-direction: row;
+        text-align: left;
+        gap: 16px;
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .elementor-widget-nusrat_why_choose_us .nw-why-icon {
+        margin: 0 !important;
+        flex-shrink: 0;
+        width: 52px;
+        height: 52px;
+    }
+
+    /* -- CTA -- */
+    .elementor-widget-nusrat_cta_banner .nw-cta h2 {
+        font-size: 20px !important;
     }
 }
