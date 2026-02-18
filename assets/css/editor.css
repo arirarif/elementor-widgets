@@ -1,0 +1,62 @@
+/* =============================================
+   NUSRAT WIDGETS - ELEMENTOR EDITOR PANEL STYLES
+   Makes the "Nusrat Widgets" category stand out
+   in the Elementor sidebar widget panel
+   ============================================= */
+
+/* --- Highlight the Nusrat Widgets category title in the panel --- */
+#elementor-panel-category-nusrat-widgets {
+    border: 1px solid #E8792B !important;
+    border-radius: 6px !important;
+    margin: 6px 8px !important;
+    overflow: hidden;
+}
+
+#elementor-panel-category-nusrat-widgets .elementor-panel-category-title {
+    background: linear-gradient(135deg, #1A3C6E 0%, #2A5298 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px;
+    padding: 12px 15px !important;
+}
+
+#elementor-panel-category-nusrat-widgets .elementor-panel-category-title:hover {
+    background: linear-gradient(135deg, #15325A 0%, #1F4080 100%) !important;
+}
+
+/* --- Style individual widget items inside the category --- */
+#elementor-panel-category-nusrat-widgets .elementor-element-wrapper {
+    border-bottom: 1px solid #f0ece6;
+}
+
+#elementor-panel-category-nusrat-widgets .elementor-element-wrapper:last-child {
+    border-bottom: none;
+}
+
+#elementor-panel-category-nusrat-widgets .elementor-element {
+    background: #FAFAF7 !important;
+}
+
+#elementor-panel-category-nusrat-widgets .elementor-element:hover {
+    background: #F5F1EB !important;
+}
+
+/* --- Widget icon color inside the category --- */
+#elementor-panel-category-nusrat-widgets .elementor-element .icon i,
+#elementor-panel-category-nusrat-widgets .elementor-element .icon {
+    color: #E8792B !important;
+}
+
+/* --- Small orange badge/dot next to category title --- */
+#elementor-panel-category-nusrat-widgets .elementor-panel-category-title::after {
+    content: "CUSTOM";
+    font-size: 9px;
+    font-weight: 700;
+    background: #E8792B;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 8px;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+}
