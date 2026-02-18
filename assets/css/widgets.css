@@ -1,0 +1,604 @@
+/* =============================================
+   NUSRAT ELEMENTOR WIDGETS - SHARED STYLES
+   High specificity to override WordPress/Flatsome
+   ============================================= */
+
+/* ---- CSS Variables ---- */
+:root {
+    --nw-primary: #1A3C6E;
+    --nw-secondary: #5BAE3B;
+    --nw-accent: #E8792B;
+    --nw-accent-hover: #D56A20;
+    --nw-light-bg: #FAFAF7;
+    --nw-cream-bg: #F5F1EB;
+    --nw-dark-text: #1E2A3A;
+    --nw-white: #FFFFFF;
+    --nw-light-gray: #E8E4DE;
+}
+
+/* =============================================
+   HERO SECTION WIDGET
+   ============================================= */
+.elementor-widget-nusrat_hero_section .nw-hero {
+    position: relative;
+    min-height: 520px;
+    display: flex !important;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    overflow: hidden;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.elementor-widget-nusrat_hero_section .nw-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.elementor-widget-nusrat_hero_section .nw-hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+}
+
+.elementor-widget-nusrat_hero_section .nw-hero-content {
+    max-width: 600px;
+    color: #fff !important;
+}
+
+.elementor-widget-nusrat_hero_section .nw-hero-tag {
+    display: inline-block !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    padding: 8px 20px !important;
+    border-radius: 24px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin-bottom: 22px !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    letter-spacing: 0.5px;
+    color: #fff !important;
+    line-height: 1.4;
+}
+
+.elementor-widget-nusrat_hero_section .nw-hero h1 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    margin: 0 0 18px 0 !important;
+    padding: 0 !important;
+    line-height: 1.15 !important;
+    color: #fff !important;
+    text-transform: none !important;
+    letter-spacing: -0.5px;
+}
+
+.elementor-widget-nusrat_hero_section .nw-hero p {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px !important;
+    font-weight: 400 !important;
+    opacity: 0.92;
+    margin: 0 0 36px 0 !important;
+    padding: 0 !important;
+    line-height: 1.7 !important;
+    color: #fff !important;
+    max-width: 540px;
+}
+
+.elementor-widget-nusrat_hero_section .nw-hero-buttons {
+    display: flex !important;
+    gap: 16px !important;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* --- Button icon & text wrappers --- */
+.elementor-widget-nusrat_hero_section .nw-btn-icon {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.elementor-widget-nusrat_hero_section .nw-btn-icon i {
+    font-size: 15px !important;
+    color: #fff !important;
+    line-height: 1 !important;
+}
+
+.elementor-widget-nusrat_hero_section .nw-btn-icon svg {
+    width: 15px !important;
+    height: 15px !important;
+    fill: #fff !important;
+}
+
+.elementor-widget-nusrat_hero_section .nw-btn-text {
+    line-height: 1.2;
+}
+
+/* --- Buttons (high specificity to beat Flatsome/theme) --- */
+.elementor-widget-nusrat_hero_section .nw-hero .nw-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 15px 34px !important;
+    border-radius: 8px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    border: 2px solid transparent !important;
+    text-decoration: none !important;
+    line-height: 1.4 !important;
+    text-transform: none !important;
+    letter-spacing: 0.2px;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.elementor-widget-nusrat_hero_section .nw-hero .nw-btn-primary {
+    background-color: var(--nw-accent) !important;
+    color: #fff !important;
+    border-color: var(--nw-accent) !important;
+}
+
+.elementor-widget-nusrat_hero_section .nw-hero .nw-btn-primary:hover,
+.elementor-widget-nusrat_hero_section .nw-hero .nw-btn-primary:focus {
+    background-color: var(--nw-accent-hover) !important;
+    border-color: var(--nw-accent-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(232, 121, 43, 0.4) !important;
+    color: #fff !important;
+}
+
+.elementor-widget-nusrat_hero_section .nw-hero .nw-btn-primary i,
+.elementor-widget-nusrat_hero_section .nw-hero .nw-btn-primary svg {
+    font-size: 15px !important;
+    width: 15px !important;
+    height: 15px !important;
+    color: #fff !important;
+    fill: #fff !important;
+}
+
+.elementor-widget-nusrat_hero_section .nw-hero .nw-btn-outline {
+    background: transparent !important;
+    color: #fff !important;
+    border: 2px solid #fff !important;
+}
+
+.elementor-widget-nusrat_hero_section .nw-hero .nw-btn-outline:hover,
+.elementor-widget-nusrat_hero_section .nw-hero .nw-btn-outline:focus {
+    background: #fff !important;
+    color: var(--nw-primary) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* =============================================
+   TRUST BAR WIDGET
+   ============================================= */
+.elementor-widget-nusrat_trust_bar .nw-trust-bar {
+    background: var(--nw-white);
+    padding: 44px 0;
+    width: 100%;
+}
+
+.elementor-widget-nusrat_trust_bar .nw-trust-bar.nw-trust-bordered {
+    border-bottom: 1px solid var(--nw-light-gray);
+}
+
+.elementor-widget-nusrat_trust_bar .nw-trust-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.elementor-widget-nusrat_trust_bar .nw-trust-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.elementor-widget-nusrat_trust_bar .nw-trust-item {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+}
+
+.elementor-widget-nusrat_trust_bar .nw-trust-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--nw-cream-bg);
+    border-radius: 14px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--nw-primary);
+    flex-shrink: 0;
+}
+
+.elementor-widget-nusrat_trust_bar .nw-trust-icon i {
+    font-size: 24px;
+    color: var(--nw-primary);
+}
+
+.elementor-widget-nusrat_trust_bar .nw-trust-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--nw-primary);
+}
+
+.elementor-widget-nusrat_trust_bar .nw-trust-item h4 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: var(--nw-dark-text) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.3 !important;
+}
+
+.elementor-widget-nusrat_trust_bar .nw-trust-item p {
+    font-size: 13px !important;
+    color: #777 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.5 !important;
+}
+
+/* =============================================
+   CATEGORY SHOWCASE WIDGET
+   ============================================= */
+.elementor-widget-nusrat_category_showcase .nw-categories {
+    padding: 80px 0;
+    background: var(--nw-light-bg);
+    width: 100%;
+}
+
+.elementor-widget-nusrat_category_showcase .nw-cat-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.elementor-widget-nusrat_category_showcase .nw-cat-section-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.elementor-widget-nusrat_category_showcase .nw-cat-section-header h2 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 34px !important;
+    font-weight: 700 !important;
+    color: var(--nw-dark-text) !important;
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+    line-height: 1.3 !important;
+    text-transform: none !important;
+}
+
+.elementor-widget-nusrat_category_showcase .nw-cat-section-header p {
+    font-size: 16px !important;
+    color: #777 !important;
+    max-width: 500px;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    line-height: 1.6 !important;
+}
+
+.elementor-widget-nusrat_category_showcase .nw-accent-line {
+    width: 50px;
+    height: 3px;
+    background: var(--nw-accent);
+    margin: 16px auto 0;
+    border-radius: 2px;
+    display: block;
+}
+
+.elementor-widget-nusrat_category_showcase .nw-cat-grid {
+    display: grid !important;
+    gap: 24px;
+}
+
+.elementor-widget-nusrat_category_showcase .nw-cat-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.elementor-widget-nusrat_category_showcase .nw-cat-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.elementor-widget-nusrat_category_showcase .nw-cat-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+.elementor-widget-nusrat_category_showcase .nw-cat-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 240px;
+    cursor: pointer;
+    display: block !important;
+    text-decoration: none !important;
+}
+
+.elementor-widget-nusrat_category_showcase .nw-cat-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.elementor-widget-nusrat_category_showcase .nw-cat-card:hover img {
+    transform: scale(1.08);
+}
+
+.elementor-widget-nusrat_category_showcase .nw-cat-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    color: #fff;
+    z-index: 2;
+}
+
+.elementor-widget-nusrat_category_showcase .nw-cat-overlay h3 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    margin: 0 0 4px 0 !important;
+    padding: 0 !important;
+    color: #fff !important;
+    text-transform: none !important;
+}
+
+.elementor-widget-nusrat_category_showcase .nw-cat-overlay span {
+    font-size: 13px !important;
+    opacity: 0.85;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 4px;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.elementor-widget-nusrat_category_showcase .nw-cat-card:hover .nw-cat-overlay span {
+    text-decoration: underline !important;
+    opacity: 1;
+}
+
+
+/* =============================================================================
+   RESPONSIVE - TABLET (max-width: 1024px)
+   ============================================================================= */
+@media screen and (max-width: 1024px) {
+
+    /* -- Hero -- */
+    .elementor-widget-nusrat_hero_section .nw-hero {
+        min-height: 440px;
+        padding: 60px 0;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero-container {
+        padding: 0 30px;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero h1 {
+        font-size: 38px !important;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero p {
+        font-size: 16px !important;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero .nw-btn {
+        padding: 13px 28px !important;
+        font-size: 14px !important;
+    }
+
+    /* -- Trust Bar -- */
+    .elementor-widget-nusrat_trust_bar .nw-trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 20px;
+    }
+
+    /* -- Categories -- */
+    .elementor-widget-nusrat_category_showcase .nw-categories {
+        padding: 60px 0;
+    }
+
+    .elementor-widget-nusrat_category_showcase .nw-cat-cols-3,
+    .elementor-widget-nusrat_category_showcase .nw-cat-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .elementor-widget-nusrat_category_showcase .nw-cat-section-header h2 {
+        font-size: 28px !important;
+    }
+}
+
+
+/* =============================================================================
+   RESPONSIVE - MOBILE (max-width: 767px)
+   ============================================================================= */
+@media screen and (max-width: 767px) {
+
+    /* -- Hero -- */
+    .elementor-widget-nusrat_hero_section .nw-hero {
+        min-height: 400px;
+        padding: 50px 0;
+        align-items: center;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero-container {
+        padding: 0 20px;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero-content {
+        max-width: 100%;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero-tag {
+        font-size: 12px !important;
+        padding: 6px 14px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero h1 {
+        font-size: 28px !important;
+        margin-bottom: 14px !important;
+        letter-spacing: -0.3px;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero p {
+        font-size: 14px !important;
+        margin-bottom: 28px !important;
+        line-height: 1.6 !important;
+        max-width: 100%;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero-buttons {
+        flex-direction: column !important;
+        gap: 12px !important;
+        align-items: stretch;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero .nw-btn {
+        padding: 14px 24px !important;
+        font-size: 14px !important;
+        justify-content: center !important;
+        width: 100% !important;
+        text-align: center;
+    }
+
+    /* -- Trust Bar -- */
+    .elementor-widget-nusrat_trust_bar .nw-trust-bar {
+        padding: 32px 0;
+    }
+
+    .elementor-widget-nusrat_trust_bar .nw-trust-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 16px;
+    }
+
+    .elementor-widget-nusrat_trust_bar .nw-trust-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+    }
+
+    .elementor-widget-nusrat_trust_bar .nw-trust-icon i {
+        font-size: 20px;
+    }
+
+    .elementor-widget-nusrat_trust_bar .nw-trust-item h4 {
+        font-size: 13px !important;
+    }
+
+    .elementor-widget-nusrat_trust_bar .nw-trust-item p {
+        font-size: 11px !important;
+    }
+
+    /* -- Categories -- */
+    .elementor-widget-nusrat_category_showcase .nw-categories {
+        padding: 48px 0;
+    }
+
+    .elementor-widget-nusrat_category_showcase .nw-cat-section-header {
+        margin-bottom: 32px;
+    }
+
+    .elementor-widget-nusrat_category_showcase .nw-cat-section-header h2 {
+        font-size: 24px !important;
+    }
+
+    .elementor-widget-nusrat_category_showcase .nw-cat-section-header p {
+        font-size: 14px !important;
+    }
+
+    .elementor-widget-nusrat_category_showcase .nw-cat-cols-2,
+    .elementor-widget-nusrat_category_showcase .nw-cat-cols-3,
+    .elementor-widget-nusrat_category_showcase .nw-cat-cols-4 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .elementor-widget-nusrat_category_showcase .nw-cat-card {
+        height: 200px;
+    }
+
+    .elementor-widget-nusrat_category_showcase .nw-cat-overlay {
+        padding: 18px;
+    }
+
+    .elementor-widget-nusrat_category_showcase .nw-cat-overlay h3 {
+        font-size: 18px !important;
+    }
+}
+
+
+/* =============================================================================
+   RESPONSIVE - SMALL MOBILE (max-width: 480px)
+   ============================================================================= */
+@media screen and (max-width: 480px) {
+
+    /* -- Hero -- */
+    .elementor-widget-nusrat_hero_section .nw-hero {
+        min-height: 360px;
+        padding: 40px 0;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero-container {
+        padding: 0 16px;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero h1 {
+        font-size: 24px !important;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero p {
+        font-size: 13px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .elementor-widget-nusrat_hero_section .nw-hero .nw-btn {
+        padding: 12px 20px !important;
+        font-size: 13px !important;
+    }
+
+    /* -- Trust Bar -- */
+    .elementor-widget-nusrat_trust_bar .nw-trust-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .elementor-widget-nusrat_trust_bar .nw-trust-item {
+        flex-direction: row;
+        text-align: left;
+        gap: 14px;
+    }
+
+    .elementor-widget-nusrat_trust_bar .nw-trust-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* -- Categories -- */
+    .elementor-widget-nusrat_category_showcase .nw-cat-card {
+        height: 180px;
+    }
+
+    .elementor-widget-nusrat_category_showcase .nw-cat-overlay h3 {
+        font-size: 16px !important;
+    }
+}
